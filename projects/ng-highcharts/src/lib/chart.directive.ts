@@ -8,14 +8,12 @@
  */
 import { Directive, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Chart } from './chart';
-import { MapChart } from './mapchart';
-import { StockChart } from './stockchart';
 
 @Directive({
   selector: '[chart]'
 })
 export class ChartDirective implements OnInit, OnDestroy, OnChanges {
-  @Input() chart: Chart | StockChart | MapChart;
+  @Input() chart: Chart;
 
   constructor(private el: ElementRef) {}
 
@@ -35,13 +33,13 @@ export class ChartDirective implements OnInit, OnDestroy, OnChanges {
   }
 
   private init() {
-    if (this.chart instanceof Chart || this.chart instanceof StockChart || this.chart instanceof MapChart) {
+    if (this.chart instanceof Chart) {
       this.chart.init(this.el);
     }
   }
 
   private destroy() {
-    if (this.chart instanceof Chart || this.chart instanceof StockChart || this.chart instanceof MapChart) {
+    if (this.chart instanceof Chart) {
       this.chart.destroy();
     }
   }

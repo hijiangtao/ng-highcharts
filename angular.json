@@ -134,8 +134,7 @@
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-highcharts/tsconfig.lib.prod.json"
-            }
+              "tsConfig": "projects/ng-highcharts/tsconfig.lib.prod.json"            }
           }
         },
         "test": {
