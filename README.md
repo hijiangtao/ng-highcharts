@@ -4,7 +4,10 @@
 [![NPM downloads](https://img.shields.io/npm/dt/ng-highcharts.svg)](https://npmjs.org/package/ng-highcharts)
 ![](https://github.com/cebor/ng-highcharts/workflows/Node.js%20Package/badge.svg)
 
-This is a Highcharts directive for Angular.
+This is a Highcharts directive for Angular, migrated from `angular-highcharts`, but only import pure highcharts from highcharts.js to reduce final bundle size.
+.
+
+**Sync Status**: [0b4c5f](https://github.com/cebor/angular-highcharts/commit/0b4c5fcb417b0c8731c7d8b8f54f40a45a246e60) in 2020.5
 
 ## Requirements
 
@@ -289,4 +292,4 @@ This is very useful when using `gauge chart` type.
 
 ## License
 
-MIT © Felix Itzenplitz
+MIT © hijiangtao

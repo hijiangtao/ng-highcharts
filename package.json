@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build_lib": "ng build ng-highcharts --prod && cp README.md dist/ng-highcharts",
+    "patch_lib": "cd projects/ng-highcharts && npm version patch",
     "publish": "npm run build_lib && cd dist/ng-highcharts && npm publish",
     "test": "ng test",
     "lint": "ng lint",

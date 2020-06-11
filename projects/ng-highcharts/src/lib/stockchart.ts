@@ -6,13 +6,13 @@ import { AsyncSubject, Observable } from 'rxjs';
 
 /**
  * @license
- * Copyright Felix Itzenplitz. All Rights Reserved.
+ * Copyright hijiangtao. All Rights Reserved.
  *
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at
  * https://github.com/cebor/ng-highcharts/blob/master/LICENSE
  *
- * @author Felix Itzenplitz
+ * @author hijiangtao
  * @author Timothy A. Perez (contributor)
  */
 export class StockChart {
