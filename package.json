@@ -1,11 +1,12 @@
 {
-  "name": "lib-angular-highcharts",
-  "version": "0.0.0",
+  "name": "lib-ng-highcharts",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build_lib": "ng build angular-highcharts --prod && cp README.md dist/angular-highcharts",
+    "build_lib": "ng build ng-highcharts --prod && cp README.md dist/ng-highcharts",
+    "publish": "npm run tag && npm run build_lib && cd dist/ng-highcharts && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

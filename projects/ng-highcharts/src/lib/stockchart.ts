@@ -1,7 +1,8 @@
 import { ElementRef } from '@angular/core';
-// import * as Highcharts from 'highcharts';
-import * as Highmaps from 'highcharts/highmaps';
+//import * as Highcharts from 'highcharts';
+import * as Highstock from 'highcharts/highstock';
 import { AsyncSubject, Observable } from 'rxjs';
+
 
 /**
  * @license
@@ -9,18 +10,20 @@ import { AsyncSubject, Observable } from 'rxjs';
  *
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at
- * https://github.com/cebor/angular-highcharts/blob/master/LICENSE
+ * https://github.com/cebor/ng-highcharts/blob/master/LICENSE
+ *
+ * @author Felix Itzenplitz
+ * @author Timothy A. Perez (contributor)
  */
-export class MapChart {
-  private refSubject: AsyncSubject<Highmaps.Chart> = new AsyncSubject();
-  ref$: Observable<Highmaps.Chart> = this.refSubject.asObservable();
-  ref: Highmaps.Chart;
-
-  constructor(private options: Highmaps.Options = { series: [] }) {}
+export class StockChart {
+  private refSubject: AsyncSubject<Highstock.Chart> = new AsyncSubject();
+  ref$: Observable<Highstock.Chart> = this.refSubject.asObservable();
+  ref: Highstock.Chart;
+  constructor(private options: Highstock.Options = { series: [] }) {}
 
   init(el: ElementRef): void {
     if (!this.ref) {
-      Highmaps.mapChart(el.nativeElement, this.options, chart => {
+      Highstock.stockChart(el.nativeElement, this.options, chart => {
         if (!this.ref) { // TODO: workaround for doubled callbacks on exporting charts: issue #238
           this.refSubject.next(chart);
           this.ref = chart;

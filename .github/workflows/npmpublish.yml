@@ -20,6 +20,6 @@ jobs:
       - run: yarn
       - run: yarn run build_lib
       - run: yarn publish
-        working-directory: ./dist/angular-highcharts
+        working-directory: ./dist/ng-highcharts
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

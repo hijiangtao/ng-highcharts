@@ -1,5 +1,5 @@
 /*
- * Public API Surface of angular-highcharts
+ * Public API Surface of ng-highcharts
  */
 
 export { Chart } from './lib/chart';

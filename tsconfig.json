@@ -19,9 +19,9 @@
       "dom"
     ],
     "paths": {
-      "angular-highcharts": [
-        "dist/angular-highcharts/angular-highcharts",
-        "dist/angular-highcharts"
+      "ng-highcharts": [
+        "dist/ng-highcharts/ng-highcharts",
+        "dist/ng-highcharts"
       ]
     }
   },

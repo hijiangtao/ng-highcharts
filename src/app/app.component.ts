@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Chart, StockChart } from 'angular-highcharts';
+import { Chart, StockChart } from 'ng-highcharts';
 
 @Component({
   selector: 'app-root',
