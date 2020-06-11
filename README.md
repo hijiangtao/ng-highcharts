@@ -138,58 +138,6 @@ removeSeries(seriesIndex: number): void
 
 Remove series from the chart
 
-### StockChart
-
-The Chart object.
-
-Type: `class`
-
-#### Constructor
-
-```typescript
-new StockChart(options);
-```
-
-#### Properties
-
-```typescript
-ref: Highstock.Chart;
-```
-
-Deprecated. Please use `ref$`.
-
-```typescript
-ref$: Observeable<Highstock.Chart>
-```
-
-Observeable that emits a Highstock.Chart
-
-### MapChart
-
-The Chart object.
-
-Type: `class`
-
-#### Constructor
-
-```typescript
-new MapChart(options);
-```
-
-#### Properties
-
-```typescript
-ref;
-```
-
-Deprecated. Please use `ref$`.
-
-```typescript
-ref$;
-```
-
-Observeable that emits a Highmaps.Chart
-
 ## Using Highcharts modules
 
 To use Highcharts modules you have to import them and provide them in a factory (required for aot).
@@ -214,66 +162,6 @@ import * as exporting from 'highcharts/modules/exporting.src';
 export class AppModule { }
 ```
 
-### Highstock & Highmaps support
-
-#### Highstock
-
-For Highstock support load the following module
-
-```ts
-// app.module.ts
-import * as highstock from 'highcharts/modules/stock.src';
-
-@NgModule({
-  providers: [
-    { provide: HIGHCHARTS_MODULES, useFactory: () => [ highstock ] }
-...
-```
-
-```ts
-// chart.component.ts
-import { StockChart } from 'ng-highcharts';
-
-@Component({
-  template: `
-    <div [chart]="stockChart"></div>
-  `
-})
-export class ChartComponent {
-  stockChart = new StockChart({ options });
-}
-```
-
-[Example Demo](https://stackblitz.com/edit/ng-highcharts-stock)
-
-### Highmaps
-
-For Highmaps support load the following module
-
-```ts
-// app.module.ts
-import * as highmaps from 'highcharts/modules/map.src';
-
-@NgModule({
-  providers: [
-    { provide: HIGHCHARTS_MODULES, useFactory: () => [ highmaps ] }
-...
-```
-
-```ts
-// chart.component.ts
-import { MapChart } from 'ng-highcharts';
-
-@Component({
-  template: `
-    <div [chart]="mapChart"></div>
-  `
-})
-export class ChartComponent {
-  mapChart = new MapChart({ options });
-}
-```
-
 Offical Highcharts NPM Docs: http://www.highcharts.com/docs/getting-started/install-from-npm
 
 ## Troubleshooting
@@ -287,8 +175,8 @@ chart = new Chart({ options } as any);
 This is very useful when using `gauge chart` type.
 ## Demo
 
-* [Demo](https://angular-9nkrgd.stackblitz.io)
-* [Code](https://stackblitz.com/edit/angular-9nkrgd)
+* [Demo](https://hijiangtao.github.io/ng-highcharts)
+* [Code](https://github.com/hijiangtao/ng-highcharts/src/app)
 
 ## License
 
